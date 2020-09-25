@@ -1,10 +1,9 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import SEO from "../components/Seo"
 import Layout from "../components/Layout"
 import PostsCard from "../components/PostsCard"
-import image1 from "../assets/image.png"
 
 export default function Home({ data }) {
   return (
@@ -12,17 +11,32 @@ export default function Home({ data }) {
       <SEO title="Welcome to my blog" />
       <div style={{ marginLeft: "1rem" }}>
         <h4>Latest Posts</h4>
-        <PostsCard
-          title="Testing Blog Dendense"
-          author="dendense"
-          date="2020-09-25"
-          description="Lorem ipsum dolor sit amet"
-          path="/"
-          thumbnail={image1}
-          tags="blog"
-          col={4}
-        />
+        <PostsCard data={data.allMarkdownRemark.nodes} col={4} />
       </div>
     </Layout>
   )
 }
+
+export const IndexQuery = graphql`
+  query dendense {
+    allMarkdownRemark {
+      nodes {
+        frontmatter {
+          date(formatString: "DD MMMM, YYYY")
+          title
+          description
+          author
+          path
+          tags
+          thumbnail {
+            childImageSharp {
+              fluid {
+                src
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+`
