@@ -1,5 +1,5 @@
 ---
-path: /blog/first-post
+path: /blog/first-posts
 title: This is Hello World Cuy
 author: dendense
 date: "2020-09-25"
