@@ -22,15 +22,15 @@ export const IndexQuery = graphql`
     allMarkdownRemark {
       nodes {
         frontmatter {
+          path
           date(formatString: "DD MMMM, YYYY")
           title
           description
           author
-          path
           tags
-          thumbnail {
+          image {
             childImageSharp {
-              fluid {
+              fluid(maxWidth: 500) {
                 src
               }
             }

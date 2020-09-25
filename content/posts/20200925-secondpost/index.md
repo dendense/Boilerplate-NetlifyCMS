@@ -4,7 +4,7 @@ title: This is Lorem Ipsum bud
 author: dendense
 date: "2020-09-24"
 description: Describe your description here bud, it'll shown here
-thumbnail: image.png
+image: image.png
 tags: ["Blog", "Multimedia"]
 ---
 

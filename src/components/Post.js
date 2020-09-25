@@ -7,11 +7,11 @@ import "../styles/index.scss"
 
 let alt = "dendense-image"
 
-const Post = ({ title, author, date, description, path, thumbnail, tags }) => (
+const Post = ({ title, author, date, description, path, image, tags }) => (
   <Card>
     <Card.Img
       variant="top"
-      src={thumbnail}
+      src={image}
       alt={alt}
       style={{ objectFit: "cover", height: "300px" }}
     />
@@ -34,7 +34,5 @@ const Post = ({ title, author, date, description, path, thumbnail, tags }) => (
     </Card.Body>
   </Card>
 )
-
-console.log(Post)
 
 export default Post

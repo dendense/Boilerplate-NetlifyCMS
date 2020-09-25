@@ -4,7 +4,7 @@ title: This is Hello World Cuy
 author: dendense
 date: "2020-09-25"
 description: Describe your description here bud, it'll shown here
-thumbnail: image.png
+image: image.png
 tags: ["Blog", "Tech"]
 ---
 

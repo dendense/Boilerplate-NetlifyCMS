@@ -9,12 +9,13 @@ export default function PostsCard(props) {
       {props.data.map(i => (
         <div key={i.frontmatter.path} className="col mb-4">
           <Post
+            key={i.frontmatter.path}
             title={i.frontmatter.title}
             author={i.frontmatter.author}
             date={i.frontmatter.date}
             description={i.frontmatter.description}
             path={i.frontmatter.path}
-            image={i.frontmatter.thumbnail.childImageSharp.fluid.src}
+            image={i.frontmatter.image.childImageSharp.fluid.src}
             tags={i.frontmatter.tags}
           />
         </div>
