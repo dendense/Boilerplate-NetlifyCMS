@@ -23,15 +23,15 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/content/posts/`,
+        path: `${__dirname}/content/posts`,
+        name: `posts`,
       },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
+        path: `${__dirname}/content/assets`,
         name: `assets`,
-        path: `${__dirname}/content/assets/`,
       },
     },
     `gatsby-plugin-netlify-cms`,
