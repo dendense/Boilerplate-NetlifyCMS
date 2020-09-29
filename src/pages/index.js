@@ -9,7 +9,7 @@ export default function Home({ data }) {
   return (
     <Layout>
       <SEO title="Welcome to my blog" />
-      <div style={{ marginLeft: "1rem" }}>
+      <div style={{ marginLeft: "1rem", marginRight: "1rem" }}>
         <h4>Latest Posts</h4>
         <PostsCard data={data.allMarkdownRemark.nodes} col={4} />
       </div>
