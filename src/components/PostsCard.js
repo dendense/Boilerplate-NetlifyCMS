@@ -14,7 +14,6 @@ export default function PostsCard(props) {
             author={i.frontmatter.author}
             date={i.frontmatter.date}
             description={i.frontmatter.description}
-            path={i.frontmatter.path}
             image={i.frontmatter.image.childImageSharp.fluid.src}
             tags={i.frontmatter.tags}
           />

@@ -22,7 +22,6 @@ export const IndexQuery = graphql`
     allMarkdownRemark {
       nodes {
         frontmatter {
-          path
           date(formatString: "DD MMMM, YYYY")
           title
           description
