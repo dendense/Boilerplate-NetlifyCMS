@@ -1,5 +1,6 @@
 ---
 templateKey: blog-post
+path: /blog/hinatazaka46-new-album
 title: Hinatazaka46 New Album
 author: SakuMayo
 date: 2020-09-29T07:17:26.066Z
@@ -9,5 +10,7 @@ tags:
   - Music
 image: main_img202008.jpg
 ---
+
 # Playlist
+
 - Kentu

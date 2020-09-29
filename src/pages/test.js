@@ -9,8 +9,15 @@ import Layout from "../components/Layout"
 import Sidebar from "../parts/Sidebar"
 
 export default function postTemplate({ data }) {
-  const post = data.markdownRemark
-  const { title, author, date, image, path, tags } = post.frontmatter
+  //const post = data.markdownRemark
+  const {
+    title,
+    author,
+    date,
+    image,
+    path,
+    tags,
+  } = data.markdownRemark.frontmatter
 
   //Set your public url after published into production build
   const disqusConfig = {
@@ -35,7 +42,7 @@ export default function postTemplate({ data }) {
               <img src={image} width="300px" alt={title} />
               <div
                 style={{ margin: "0.5rem" }}
-                dangerouslySetInnerHTML={{ __html: post.html }}
+                dangerouslySetInnerHTML={{ __html: data.html }}
               />
               <div style={{ marginTop: "2rem" }}>
                 Tags :{" "}
@@ -61,7 +68,7 @@ export default function postTemplate({ data }) {
 }
 
 export const blogQuery = graphql`
-  query BlogPerPosts($path: String!) {
+  query PerPosts($path: String = "/blog/hinatazaka46-new-album") {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       frontmatter {
         path
