@@ -10,19 +10,18 @@ backend:
     uploadMedia: "[skip ci] Upload “{{path}}”"
     deleteMedia: "[skip ci] Delete “{{path}}”"
 
-publish_mode: editorial_workflow
 media_folder: content/assets/img
 public_folder: /img
-local_backend: true
 
 collections:
   - name: blog # Used in routes, e.g., /admin/collections/blog
     label: Blog # Used in the UI
     folder: content/posts # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
-    media_folder: /content/assets/img
+    media_folder: ""
     public_folder: ""
     slug: "{{year}}{{month}}{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    path: "{{slug}}/index" # Path route for every post
     fields: # The fields for each document, usually in front matter
       - {
           label: "Template Key",
