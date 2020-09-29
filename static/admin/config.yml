@@ -19,7 +19,7 @@ collections:
     folder: content/posts # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     media_folder: /content/assets/img
-    public_folder: ""
+    public_folder: /content/assets/img
     slug: "{{year}}{{month}}{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     path: "{{slug}}/index" # Path route for every post
     fields: # The fields for each document, usually in front matter
