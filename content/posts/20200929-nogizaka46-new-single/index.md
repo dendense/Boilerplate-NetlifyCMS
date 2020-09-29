@@ -7,7 +7,7 @@ description: Lorem Ipsum Dolor Sit Amet
 tags:
   - Blog
   - Music
-image: /assets/img/artwork_middle.png
+image: artwork_middle.png
 ---
 
 # Playlist
