@@ -18,8 +18,8 @@ export default function Home({ data }) {
 }
 
 export const IndexQuery = graphql`
-  query dendense {
-    allMarkdownRemark {
+  query Boilerplate {
+    allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
       nodes {
         frontmatter {
           date(formatString: "DD MMMM, YYYY")

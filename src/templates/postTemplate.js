@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-// import { CommentCount } from "gatsby-plugin-disqus" //Disqus
+import { Disqus, CommentCount } from "gatsby-plugin-disqus"
 
 import "../styles/index.scss"
 import { slugify } from "../utils/utilityFunction"
@@ -10,28 +10,35 @@ import Sidebar from "../parts/Sidebar"
 
 export default function postTemplate({ data }) {
   const post = data.markdownRemark
-  const { title, author, date, image, tags } = post.frontmatter
+  const { title, author, date, tags, path, image } = post.frontmatter
 
   //Set your public url after published into production build
-  // const disqusConfig = {
-  //   // url: `https://himitsupro.com${path}`,
-  //   title: title,
-  //   identifier: path.split("/").slice(-1)[0],
-  //
+  const disqusConfig = {
+    // url: `https://himitsupro.com${path}`,
+    title: title,
+    identifier: path.split("/").slice(-1)[0],
+  }
 
   return (
     <div>
+      {console.log(image)}
       <Layout>
         <SEO title={title} keyword={(title, tags)} />
-        <div className="row mt-3 post-body">
+        <div className="row post-body">
           <div className="col-md-8">
             <div className="post-bar">
               <h1>{title}</h1>
               <p>
                 Posted by <b>{author}</b> on {date} |{" "}
-                {/* <CommentCount config={disqusConfig} /> */}
+                <CommentCount config={disqusConfig} />
               </p>
-              <img src={image} alt={title} width="300px" />
+              <img
+                src={image.childImageSharp.fluid.src}
+                alt={title}
+                width="100%"
+                height="500px"
+                style={{ objectFit: "cover" }}
+              />
               <div
                 style={{ margin: "0.5rem" }}
                 dangerouslySetInnerHTML={{ __html: post.html }}
@@ -48,6 +55,9 @@ export default function postTemplate({ data }) {
                   </div>
                 ))}
               </div>
+              <div style={{ marginTop: "1rem" }}>
+                <Disqus config={disqusConfig} />
+              </div>
             </div>
           </div>
           <div className="col-md-4">
@@ -63,16 +73,15 @@ export const blogQuery = graphql`
   query BlogPerPosts($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       frontmatter {
+        path
         date(formatString: "DD MMMM, YYYY")
         title
-        description
         author
         tags
-        path
         image {
           childImageSharp {
             fluid(maxWidth: 500) {
-              originalImg
+              src
             }
           }
         }

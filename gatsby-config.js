@@ -46,7 +46,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-disqus`,
       options: {
-        shortname: `dendense-boilerplate`,
+        shortname: `dendense-github`,
       },
     },
     {
@@ -56,7 +56,7 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 590,
+              maxWidth: 640,
             },
           },
           {
