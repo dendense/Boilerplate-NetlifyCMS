@@ -27,6 +27,7 @@ export const IndexQuery = graphql`
           description
           author
           tags
+          path
           image {
             childImageSharp {
               fluid(maxWidth: 500) {

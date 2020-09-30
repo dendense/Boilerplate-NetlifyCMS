@@ -13,6 +13,7 @@ export default function PostsCard(props) {
             title={i.frontmatter.title}
             author={i.frontmatter.author}
             date={i.frontmatter.date}
+            path={i.frontmatter.path}
             description={i.frontmatter.description}
             image={i.frontmatter.image.childImageSharp.fluid.src}
             tags={i.frontmatter.tags}

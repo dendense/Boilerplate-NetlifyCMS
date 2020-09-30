@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { Disqus, CommentCount } from "gatsby-plugin-disqus"
+import { CommentCount } from "gatsby-plugin-disqus"
 
 import "../styles/index.scss"
 import { slugify } from "../utils/utilityFunction"

@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import { Disqus, CommentCount } from "gatsby-plugin-disqus"
+// import { CommentCount } from "gatsby-plugin-disqus" //Disqus
 
 import "../styles/index.scss"
 import { slugify } from "../utils/utilityFunction"
@@ -10,15 +10,14 @@ import Sidebar from "../parts/Sidebar"
 
 export default function postTemplate({ data }) {
   const post = data.markdownRemark
-  const { title, author, date, image, path, tags } = post.frontmatter
+  const { title, author, date, image, tags } = post.frontmatter
 
   //Set your public url after published into production build
-  const disqusConfig = {
-    // url: `https://himitsupro.com${path}`,
-    title: title,
-    identifier: path.split("/").slice(-1)[0],
-  }
-  console.log(disqusConfig)
+  // const disqusConfig = {
+  //   // url: `https://himitsupro.com${path}`,
+  //   title: title,
+  //   identifier: path.split("/").slice(-1)[0],
+  //
 
   return (
     <div>
@@ -30,9 +29,9 @@ export default function postTemplate({ data }) {
               <h1>{title}</h1>
               <p>
                 Posted by <b>{author}</b> on {date} |{" "}
-                <CommentCount config={disqusConfig} />
+                {/* <CommentCount config={disqusConfig} /> */}
               </p>
-              <img src={image} width="300px" alt={title} />
+              <img src={image} alt={title} width="300px" />
               <div
                 style={{ margin: "0.5rem" }}
                 dangerouslySetInnerHTML={{ __html: post.html }}
@@ -64,18 +63,19 @@ export const blogQuery = graphql`
   query BlogPerPosts($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       frontmatter {
-        path
+        date(formatString: "DD MMMM, YYYY")
         title
+        description
         author
-        date(formatString: "DD MMM, YYYY")
+        tags
+        path
         image {
           childImageSharp {
             fluid(maxWidth: 500) {
-              src
+              originalImg
             }
           }
         }
-        tags
       }
       html
     }

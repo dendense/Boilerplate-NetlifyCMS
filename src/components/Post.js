@@ -5,14 +5,12 @@ import { Card } from "react-bootstrap"
 import { slugify, truncate } from "../utils/utilityFunction"
 import "../styles/index.scss"
 
-let alt = "dendense-image"
-
 const Post = ({ title, author, date, description, path, image, tags }) => (
   <Card>
     <Card.Img
       variant="top"
       src={image}
-      alt={alt}
+      alt={title}
       style={{ objectFit: "cover", height: "300px" }}
     />
     <Card.Body>
