@@ -14,7 +14,7 @@ export default function postTemplate({ data }) {
 
   //Set your public url after published into production build
   const disqusConfig = {
-    // url: `https://himitsupro.com${path}`,
+    url: `https://dendense-boilerplate-netlifycms.netlify.app${path}`,
     title: title,
     identifier: path.split("/").slice(-1)[0],
   }
