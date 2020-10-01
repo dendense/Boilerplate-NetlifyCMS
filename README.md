@@ -4,8 +4,6 @@
 
 Selamat datang di Repository Boilerplate-NetlifyCMS. Ini adalah template web-blog starter yang di buat dengan Framework [ReactJS](https://reactjs.org/docs/getting-started.html) dan dipadukan dengan konfigurasi file [GatsbyJS](https://www.gatsbyjs.com/docs/). Tidak lupa juga saya integrasikan dengan [NetlifyCMS](https://www.netlifycms.org/) agar pembuatan blog-post dapat dilakukan dengan mengakses posting panel, dan memudahkan kita dalam menulis blog.
 
----
-
 ## Features
 
 - Simple Landing Page dengan fungsional blog yang dibuat dengan Netlify CMS
