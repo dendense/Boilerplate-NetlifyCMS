@@ -1,16 +1,15 @@
 ---
 templateKey: blog-post
-path: /blog/hinatazaka46-new-album
-title: Hinatazaka46 New Album
+path: /blog/osaka-castle
+title: Immersive Castle on Osaka Prefecture
 author: SakuMayo
-date: 2020-09-29T07:17:26.066Z
-description: Lorem Ipsum Dolor Sit Amet
+date: 2020-09-30T07:17:26.066Z
+description: Spend your holiday with visiting Osaka Castle
 tags:
-  - Blog
-  - Music
-image: main_img202008.jpg
+  - Traveling
+image: heritage-5430081_1280.jpg
 ---
 
-# Playlist
+# This is Title
 
-- Kentu
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
