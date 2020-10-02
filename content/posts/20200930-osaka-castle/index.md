@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+type: blog
 path: /blog/osaka-castle
 title: Immersive Castle on Osaka Prefecture
 author: SakuMayo

@@ -3,6 +3,7 @@ const path = require("path")
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
   const postTemplate = path.resolve("src/templates/postTemplate.js")
+  const bioTemplate = path.resolve("src/templates/bioTemplate.js")
 
   var data_graphql = await graphql(`
     query BoilerplateNetlifyCMS {
@@ -24,6 +25,13 @@ exports.createPages = async ({ actions, graphql }) => {
     createPage({
       path: node.frontmatter.path,
       component: postTemplate,
+    })
+  }
+  for (let edge of data_graphql.data.allMarkdownRemark.edges) {
+    let { node } = edge
+    createPage({
+      path: `/bio`,
+      component: bioTemplate,
     })
   }
 }

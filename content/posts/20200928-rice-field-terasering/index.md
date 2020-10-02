@@ -1,5 +1,5 @@
 ---
-templateKey: blog-post
+type: blog
 path: /blog/rice-field-terasering
 title: Asian Rice Field Terracing
 author: SakuMayo

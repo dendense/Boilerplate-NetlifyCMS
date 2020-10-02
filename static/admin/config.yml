@@ -23,12 +23,6 @@ collections:
     slug: "{{year}}{{month}}{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     path: "{{slug}}/index" # Path route for every post
     fields: # The fields for each document, usually in front matter
-      - {
-          label: "Template Key",
-          name: "templateKey",
-          widget: "hidden",
-          default: "blog-post",
-        }
       - { label: Path, name: path, widget: string, required: true }
       - { label: Title, name: title, widget: string, required: true }
       - { label: Author, name: author, widget: string, required: true }
@@ -37,3 +31,14 @@ collections:
       - { label: Tags, name: tags, widget: list, required: true }
       - { label: Featured Image, name: image, widget: image, required: true }
       - { label: Body, name: body, widget: markdown }
+
+  - name: pages
+    label: Pages
+    files:
+      - file: "content/bio/bio.md"
+        label: About
+        name: about
+        fields:
+          - { label: Path, name: path, widget: string, required: true }
+          - { label: Title, name: title, widget: string, required: true }
+          - { label: Body, name: body, widget: markdown }

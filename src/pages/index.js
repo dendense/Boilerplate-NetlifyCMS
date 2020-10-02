@@ -19,7 +19,10 @@ export default function Home({ data }) {
 
 export const IndexQuery = graphql`
   query Boilerplate {
-    allMarkdownRemark(sort: { order: DESC, fields: frontmatter___date }) {
+    allMarkdownRemark(
+      sort: { order: DESC, fields: frontmatter___date }
+      filter: { frontmatter: { type: { eq: "blog" } } }
+    ) {
       nodes {
         frontmatter {
           date(formatString: "DD MMMM, YYYY")

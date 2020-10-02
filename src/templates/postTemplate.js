@@ -21,7 +21,6 @@ export default function postTemplate({ data }) {
 
   return (
     <div>
-      {console.log(image)}
       <Layout>
         <SEO title={title} keyword={(title, tags)} />
         <div className="row post-body">
@@ -69,7 +68,7 @@ export default function postTemplate({ data }) {
   )
 }
 
-export const blogQuery = graphql`
+export const postQuery = graphql`
   query BlogPerPosts($path: String!) {
     markdownRemark(frontmatter: { path: { eq: $path } }) {
       frontmatter {
@@ -80,7 +79,7 @@ export const blogQuery = graphql`
         tags
         image {
           childImageSharp {
-            fluid(maxWidth: 500) {
+            fluid(maxWidth: 1000) {
               src
             }
           }
