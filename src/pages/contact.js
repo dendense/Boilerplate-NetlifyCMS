@@ -7,7 +7,7 @@ export default function Contact() {
   return (
     <Layout>
       <SEO title="Contact Us" />
-      <div>Project</div>
+      <div>Contact</div>
     </Layout>
   )
 }

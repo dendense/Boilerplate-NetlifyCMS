@@ -14,7 +14,7 @@ export default function bioTemplate({ data }) {
     <div>
       <Layout>
         <SEO title="About Us" keyword="About Us" />
-        <div className="row post-body">
+        <div className="row m-2">
           <div className="col-md-8">
             <div className="post-bar">
               <h1>{title}</h1>
