@@ -1,5 +1,6 @@
 const path = require("path")
 
+// API Script for generate pages dynamically
 exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
   const postTemplate = path.resolve("src/templates/postTemplate.js")
@@ -27,13 +28,10 @@ exports.createPages = async ({ actions, graphql }) => {
       component: postTemplate,
     })
   }
-  for (let edge of data_graphql.data.allMarkdownRemark.edges) {
-    let { node } = edge
-    createPage({
-      path: `/bio`,
-      component: bioTemplate,
-    })
-  }
+  createPage({
+    path: `/bio`,
+    component: bioTemplate,
+  })
 }
 
 /* Fixing react-hot-router warning while develop locally, if you won't add this hook, just remove react-dom instead & keep @hot-loader/react-dom depedency*/
