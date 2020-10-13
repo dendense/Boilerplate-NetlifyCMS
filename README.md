@@ -33,3 +33,12 @@ Netlify CMS dapat berjalan di segala frontend web environment, tetapi cara terce
 <a href="https://app.netlify.com/start/deploy?repository=https://github.com/dendense/Boilerplate-NetlifyCMS&amp;stack=cms"><img src="https://www.netlify.com/img/deploy/button.svg" alt="Deploy to Netlify"></a>
 
 ### Akses Secara Lokal
+
+Untuk mengakses project secara lokal, kita cukup menjalankan syntax bash berikut :
+
+> gatsby develop
+> Nantinya akan muncul link lokal yang dapat anda akses dengan browser kesayangan anda.
+
+### Tutorial Lengkap
+
+Saya sudah membuat sebuah thread seputar konfigurasi project repository Boilerplate ini pada Medium JavaScript Indonesia, kunjungi link berikut untuk detailnya : [Membangun Blog Sederhana dengan GatsbyJS dan Netlify CMS](https://medium.com/@denykun/membangun-blog-sederhana-dengan-gatsbyjs-dan-netlify-cms-89d3b78fcb07)
