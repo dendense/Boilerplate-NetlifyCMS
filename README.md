@@ -37,7 +37,8 @@ Netlify CMS dapat berjalan di segala frontend web environment, tetapi cara terce
 Untuk mengakses project secara lokal, kita cukup menjalankan syntax bash berikut :
 
 > gatsby develop
-> Nantinya akan muncul link lokal yang dapat anda akses dengan browser kesayangan anda.
+
+Nantinya akan muncul link lokal yang dapat anda akses dengan browser kesayangan anda.
 
 ### Tutorial Lengkap
 
