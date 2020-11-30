@@ -38,7 +38,12 @@ collections:
       - file: "content/bio/bio.md"
         label: About
         name: about
+        media_folder: ""
+        public_folder: ""
         fields:
           - { label: Path, name: path, widget: string, required: true }
           - { label: Title, name: title, widget: string, required: true }
+          - { label: Username, name: username, widget: string, required: true }
+          - { label: Email, name: email, widget: string, required: false }
+          - { label: Github, name: github, widget: string, required: false }
           - { label: Body, name: body, widget: markdown }

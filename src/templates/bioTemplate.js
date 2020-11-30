@@ -18,10 +18,7 @@ export default function bioTemplate({ data }) {
           <div className="col-md-8">
             <div className="post-bar">
               <h1>{title}</h1>
-              <div
-                style={{ margin: "0.5rem" }}
-                dangerouslySetInnerHTML={{ __html: post.html }}
-              />
+              <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </div>
           </div>
           <div className="col-md-4">

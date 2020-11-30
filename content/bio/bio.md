@@ -1,7 +1,11 @@
 ---
 type: bio
 path: /bio
-title: About Our Values
+title: Get in Touch!
+image: profile.jpg #Square Image Profile
+username: SakuMyao
+email: denyfarras@gmail.com
+github: https://github.com/dendense
 ---
 
 ## Anumas Title
