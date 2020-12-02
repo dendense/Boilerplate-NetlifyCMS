@@ -22,13 +22,6 @@ const Navigation = props => (
         >
           Project
         </Link>
-        <Link
-          className="nav-link"
-          activeClassName="nav-link active"
-          to="/contact"
-        >
-          Contact
-        </Link>
       </Nav>
     </Navbar.Collapse>
   </Navbar>
