@@ -13,7 +13,11 @@ const Sidebar = () => (
         <StaticQuery
           query={graphql`
             {
-              allMarkdownRemark(limit: 4, sort: { fields: id }) {
+              allMarkdownRemark(
+                limit: 4
+                sort: { fields: id }
+                filter: { frontmatter: { type: { eq: "blog" } } }
+              ) {
                 edges {
                   node {
                     frontmatter {
