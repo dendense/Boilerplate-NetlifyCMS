@@ -46,5 +46,11 @@ collections:
           - { label: Title, name: title, widget: string, required: true }
           - { label: Fullname, name: fullname, widget: string, required: true }
           - { label: Email, name: email, widget: string, required: false }
+          - {
+              label: Website Name,
+              name: websitename,
+              widget: string,
+              required: false,
+            }
           - { label: Website, name: website, widget: string, required: false }
           - { label: Body, name: body, widget: markdown }

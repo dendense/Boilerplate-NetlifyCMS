@@ -8,7 +8,14 @@ import Sidebar from "../parts/Sidebar"
 
 export default function bioTemplate({ data }) {
   const post = data.markdownRemark
-  const { title, email, fullname, website, image } = post.frontmatter
+  const {
+    title,
+    email,
+    fullname,
+    website,
+    websitename,
+    image,
+  } = post.frontmatter
 
   return (
     <div>
@@ -43,7 +50,7 @@ export default function bioTemplate({ data }) {
                               <th scope="row">Website</th>
                               <td>
                                 <Link to={website} target="_blank">
-                                  {website}
+                                  {websitename}
                                 </Link>
                               </td>
                             </tr>
@@ -73,6 +80,7 @@ export const bioQuery = graphql`
         title
         email
         fullname
+        websitename
         website
         image
       }
