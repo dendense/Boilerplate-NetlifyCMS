@@ -15,7 +15,7 @@ export default function PostsCard(props) {
             date={i.frontmatter.date}
             path={i.frontmatter.path}
             description={i.frontmatter.description}
-            image={i.frontmatter.image.childImageSharp.fluid.src}
+            image={i.frontmatter.image}
             tags={i.frontmatter.tags}
           />
         </div>

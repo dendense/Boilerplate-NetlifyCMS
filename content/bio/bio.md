@@ -2,7 +2,7 @@
 type: bio
 path: /bio
 title: Get in Touch!
-image: profile.jpg #Square Image Profile
+image: https://i.ibb.co/VCkm2Dt/profile.jpg #Square Image Profile
 fullname: Deny Farras Febriyanto
 email: denyfarras@gmail.com
 website: https://github.com/dendense

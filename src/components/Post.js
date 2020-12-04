@@ -27,7 +27,7 @@ const Post = ({ title, author, date, description, path, image, tags }) => (
         Read more
       </Link>
       <div className="text-muted mt-2 small">
-        Author: <Link to="/bio">{author}</Link> | Date: {date}
+        Author: {author} | Date: {date}
       </div>
     </Card.Body>
   </Card>

@@ -31,12 +31,19 @@ export default function postTemplate({ data }) {
                 Posted by <b>{author}</b> on {date} |{" "}
                 <CommentCount config={disqusConfig} />
               </p>
-              <img
+              {/* <img
                 src={image.childImageSharp.fluid.src}
                 alt={title}
                 width="100%"
                 height="500px"
                 style={{ objectFit: "cover" }}
+              /> */}
+              <img
+                src={image}
+                alt={title}
+                width="100%"
+                height="500px"
+                style={{ objectFit: "contain" }}
               />
               <div
                 style={{ margin: "0.5rem" }}
@@ -77,13 +84,7 @@ export const postQuery = graphql`
         title
         author
         tags
-        image {
-          childImageSharp {
-            fluid(maxWidth: 1000) {
-              src
-            }
-          }
-        }
+        image
       }
       html
     }

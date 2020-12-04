@@ -21,11 +21,7 @@ export default function bioTemplate({ data }) {
               <div className="card mb-3">
                 <div className="row no-gutters">
                   <div className="col-md-4">
-                    <img
-                      src={image.childImageSharp.fluid.src}
-                      className="card-img"
-                      alt="DENDENSE"
-                    />
+                    <img src={image} className="card-img" alt="DENDENSE" />
                   </div>
                   <div className="col-md-8">
                     <div className="card-body">
@@ -78,13 +74,7 @@ export const bioQuery = graphql`
         email
         fullname
         website
-        image {
-          childImageSharp {
-            fluid {
-              src
-            }
-          }
-        }
+        image
       }
       html
     }

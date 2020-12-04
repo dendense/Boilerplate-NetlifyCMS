@@ -31,13 +31,7 @@ export const IndexQuery = graphql`
           author
           tags
           path
-          image {
-            childImageSharp {
-              fluid(maxWidth: 500) {
-                src
-              }
-            }
-          }
+          image
         }
       }
     }

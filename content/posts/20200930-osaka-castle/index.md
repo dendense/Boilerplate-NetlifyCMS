@@ -7,7 +7,7 @@ date: 2020-09-30T07:17:26.066Z
 description: Spend your holiday with visiting Osaka Castle
 tags:
   - Traveling
-image: heritage-5430081_1280.jpg
+image: https://i.ibb.co/QXXfJTQ/heritage-5430081-1280.jpg
 ---
 
 # This is Title

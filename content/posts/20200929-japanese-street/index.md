@@ -7,7 +7,7 @@ date: 2020-09-29T06:47:35.441Z
 description: Amazing Neon Cyberpunk view on Japanese steer
 tags:
   - Photography
-image: japan-2014618_1280.jpg
+image: https://i.ibb.co/pz6X3mP/japan-2014618-1280.jpg
 ---
 
 # This is Title
