@@ -1,7 +1,7 @@
 ---
 type: blog
-path: /blog/osaka-castle
-title: Immersive Castle in Osaka Prefecture
+path: /blog/himeji-castle
+title: Immersive Himeji Castle in Japan
 author: SakuMayo
 date: 2020-09-30T07:17:26.066Z
 description: Spend your holiday with visiting Osaka Castle
