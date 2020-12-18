@@ -5,6 +5,7 @@ exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
   const postTemplate = path.resolve("src/templates/postTemplate.js")
   const bioTemplate = path.resolve("src/templates/bioTemplate.js")
+  const tagTemplate = path.resolve("src/templates/tagTemplate.js")
 
   var data_graphql = await graphql(`
     query BoilerplateNetlifyCMS {
@@ -31,6 +32,16 @@ exports.createPages = async ({ actions, graphql }) => {
   createPage({
     path: `/bio`,
     component: bioTemplate,
+  })
+
+  data_graphql.data.allMarkdownRemark.distinct.forEach(tag => {
+    createPage({
+      path: `/tag/${tag.toLowerCase()}`,
+      component: tagTemplate,
+      context: {
+        tags: tag,
+      },
+    })
   })
 }
 
