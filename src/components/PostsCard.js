@@ -5,7 +5,7 @@ import "../styles/index.scss"
 
 export default function PostsCard(props) {
   return (
-    <div className={`row row-cols-1 row-cols-md-${props.col}`}>
+    <div className={`row row-cols-1 pt-3 row-cols-md-${props.col}`}>
       {props.data.map(i => (
         <div key={i.frontmatter.path} className="col mb-4">
           <Post
