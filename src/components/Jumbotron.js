@@ -9,7 +9,7 @@ const Jumbotron = ({ headline, punchline }) => (
   >
     <div className="container">
       <h1 className="display-4">{headline}</h1>
-      <p className="lead">{punchline}</p>
+      <p className="lead pl-1">{punchline}</p>
     </div>
   </div>
 )
