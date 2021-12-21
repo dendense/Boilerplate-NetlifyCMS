@@ -1,17 +1,14 @@
-import React from "react"
+import React from "react";
 
-import "../styles/index.scss"
+import "../styles/index.scss";
 
 const Jumbotron = ({ headline, punchline }) => (
-  <div
-    className="jumbotron jumbotron-fluid"
-    style={{ marginLeft: "1rem", marginRight: "1rem" }}
-  >
-    <div className="container">
-      <h1 className="display-4">{headline}</h1>
-      <p className="lead pl-1">{punchline}</p>
+  <div className="p-5 mb-4 bg-dark text-white rounded-3">
+    <div className="container-fluid py-5">
+      <h1 className="display-5 fw-bold">{headline}</h1>
+      <p className="col-md-8 fs-4 pl-1">{punchline}</p>
     </div>
   </div>
-)
+);
 
-export default Jumbotron
+export default Jumbotron;

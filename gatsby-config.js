@@ -1,31 +1,39 @@
-/**
- * Configure your Gatsby site with this file.
- *
- * See: https://www.gatsbyjs.com/docs/gatsby-config/
- */
-
 module.exports = {
-  /* Your site config here */
   siteMetadata: {
-    title: `Dendense`,
-    author: {
-      name: `Deny Farras Febriyanto`,
-      summary: `Creating & Develop Something.`,
-    },
+    siteUrl: "https://github.com/dendense",
+    title: "DensLAB",
     description: `Tech & Multimedia, Expand Your Skills Experience!`,
-    siteUrl: `https://himitsupro.com`,
+    siteUrl: `https://github.com/dendense`,
+    author: {
+      name: `DENDENSE`,
+      summary: `Create & Develop Something`,
+    },
     social: {
       instagram: `deny_desu`,
     },
   },
-  /* Put Your Plugins Here */
   plugins: [
+    "gatsby-plugin-sass",
+    {
+      resolve: "gatsby-plugin-google-analytics",
+      options: {
+        trackingId: "UA-106476104-3",
+      },
+    },
+    "gatsby-plugin-image",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap",
+    "gatsby-plugin-mdx",
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+    `gatsby-plugin-netlify-cms`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/posts`,
         name: `posts`,
       },
+      __key: "posts",
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -33,6 +41,7 @@ module.exports = {
         path: `${__dirname}/content/bio`,
         name: `bio`,
       },
+      __key: "bio",
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -40,15 +49,15 @@ module.exports = {
         path: `${__dirname}/content/assets`,
         name: `assets`,
       },
+      __key: "assets",
     },
-    `gatsby-plugin-netlify-cms`,
-    `gatsby-plugin-sass`,
-    `gatsby-plugin-react-helmet`,
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-source-filesystem",
       options: {
-        //trackingId: Put your tracking ID here `UA-74413199-2`,
+        name: `images`,
+        path: `${__dirname}/src/images/`,
       },
+      __key: "images",
     },
     {
       resolve: `gatsby-plugin-disqus`,
@@ -66,19 +75,10 @@ module.exports = {
               maxWidth: 640,
             },
           },
-          {
-            resolve: `gatsby-remark-responsive-iframe`,
-            options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`,
-            },
-          },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
         ],
       },
     },
-    `gatsby-plugin-netlify-cms`,
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
   ],
-}
+};

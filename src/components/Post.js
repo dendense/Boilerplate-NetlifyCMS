@@ -1,9 +1,9 @@
-import React from "react"
-import { Link } from "gatsby"
-import { Card } from "react-bootstrap"
+import React from "react";
+import { Link } from "gatsby";
+import { Card } from "react-bootstrap";
 
-import { slugify, truncate } from "../utils/utilityFunction"
-import "../styles/index.scss"
+import { slugify, truncate } from "../utils/utilityFunction";
+import "../styles/index.scss";
 
 const Post = ({ title, author, date, description, path, image, tags }) => (
   <Card>
@@ -11,11 +11,11 @@ const Post = ({ title, author, date, description, path, image, tags }) => (
       variant="top"
       src={image}
       alt={title}
-      style={{ objectFit: "cover", height: "300px" }}
+      style={{ objectFit: "cover", height: "200px" }}
     />
     <Card.Body>
       <Card.Title>{title}</Card.Title>
-      {tags.map(tag => (
+      {tags.map((tag) => (
         <div className="mr-1 d-inline-flex" key={tag}>
           <Link to={`/tag/${slugify(tag)}`}>
             <span className="badge badge-secondary text-uppercase">{tag}</span>
@@ -31,6 +31,6 @@ const Post = ({ title, author, date, description, path, image, tags }) => (
       </div>
     </Card.Body>
   </Card>
-)
+);
 
-export default Post
+export default Post;

@@ -1,9 +1,9 @@
-import React from "react"
-import PropTypes from "prop-types"
+import React from "react";
+import PropTypes from "prop-types";
 
-import "../styles/index.scss"
-import Nav from "../parts/Nav"
-import Footer from "../parts/Footer"
+import "../styles/index.scss";
+import Nav from "../parts/Nav";
+import Footer from "../parts/Footer";
 
 const Layout = ({ children }) => (
   <div
@@ -16,10 +16,10 @@ const Layout = ({ children }) => (
     </div>
     <Footer copyright="DENDENSE" />
   </div>
-)
+);
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-}
+};
 
-export default Layout
+export default Layout;

@@ -1,13 +1,13 @@
-@import "~bootstrap/dist/css/bootstrap.css";
+@import "../styles/bootstrap.css";
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap");
 
 @import "./postTemplate_style";
 
 .dendense-font {
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 300;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 300;
 }
 
 .img-wrapper {
-    object-fit: cover;
+  object-fit: cover;
 }

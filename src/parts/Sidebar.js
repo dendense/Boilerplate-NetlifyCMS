@@ -1,13 +1,13 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import React from "react";
+import { StaticQuery, graphql } from "gatsby";
 
-import PostList from "../components/PostList"
+import PostList from "../components/PostList";
 
 const Sidebar = () => (
   <div className="mt-5">
     <div className="card mb-3">
       <div className="card-header">
-        <h5>Featured Post</h5>
+        <h5>Check this Out!</h5>
       </div>
       <div className="card-body">
         <StaticQuery
@@ -29,16 +29,16 @@ const Sidebar = () => (
               }
             }
           `}
-          render={data => {
-            const _ = require("lodash")
-            const randomizePost = data.allMarkdownRemark.edges.map(post => {
-              const { title, path } = post.node.frontmatter
+          render={(data) => {
+            const _ = require("lodash");
+            const randomizePost = data.allMarkdownRemark.edges.map((post) => {
+              const { title, path } = post.node.frontmatter;
               return (
                 <PostList key={`${title}`} title={title} path={path}></PostList>
-              )
-            })
-            let result = _.sampleSize(randomizePost, 4)
-            return <ul className="list-group post-list">{result}</ul>
+              );
+            });
+            let result = _.sampleSize(randomizePost, 4);
+            return <ul className="list-group post-list">{result}</ul>;
           }}
         />
       </div>
@@ -70,6 +70,6 @@ const Sidebar = () => (
       </div>
     </div>
   </div>
-)
+);
 
-export default Sidebar
+export default Sidebar;

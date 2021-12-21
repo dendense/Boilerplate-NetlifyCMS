@@ -1,10 +1,12 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from "react";
+import { graphql } from "gatsby";
 
-import SEO from "../components/Seo"
-import Layout from "../components/Layout"
-import PostsCard from "../components/PostsCard"
-import Jumbotron from "../components/Jumbotron"
+import SEO from "../components/Seo";
+import Layout from "../components/Layout";
+import PostsCard from "../components/PostsCard";
+import Jumbotron from "../components/Jumbotron";
+
+import "../styles/index.scss";
 
 export default function Home({ data }) {
   return (
@@ -14,12 +16,12 @@ export default function Home({ data }) {
         headline="DensLAB"
         punchline="Learn Everything &amp; Expand Your Skills."
       />
-      <div style={{ marginLeft: "1rem", marginRight: "1rem" }}>
+      <div className="container">
         <h4>Latest Posts</h4>
         <PostsCard data={data.allMarkdownRemark.nodes} col={4} />
       </div>
     </Layout>
-  )
+  );
 }
 
 export const IndexQuery = graphql`
@@ -41,4 +43,4 @@ export const IndexQuery = graphql`
       }
     }
   }
-`
+`;
