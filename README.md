@@ -2,7 +2,7 @@
 
 # NetlifyCMS + Gatsby's blog starter V1.2
 
-Selamat datang di Repository Boilerplate-NetlifyCMS. Ini adalah template web-blog starter yang di buat dengan Framework [ReactJS](https://reactjs.org/docs/getting-started.html) dan dipadukan dengan konfigurasi file [GatsbyJS](https://www.gatsbyjs.com/docs/). Tidak lupa juga saya integrasikan dengan [NetlifyCMS](https://www.netlifycms.org/) agar pembuatan blog-post dapat dilakukan dengan mengakses posting panel, dan memudahkan kita dalam menulis blog ini.
+Selamat datang di Repository Boilerplate-NetlifyCMS. Ini adalah template web-blog starter yang di buat dengan Framework [ReactJS](https://reactjs.org/docs/getting-started.html) dan dipadukan dengan konfigurasi file [GatsbyJS](https://www.gatsbyjs.com/docs/). Tidak lupa juga saya integrasikan dengan [NetlifyCMS](https://www.netlifycms.org/) agar pembuatan blog-post dapat dilakukan dengan mengakses posting panel, dan memudahkan kita dalam menulis blog.
 
 DEMO : [Click Here](https://dendense-boilerplate-netlifycms.netlify.app)
 
@@ -41,6 +41,13 @@ Untuk mengakses project secara lokal, kita cukup menjalankan syntax bash berikut
 > gatsby develop
 
 Nantinya akan muncul link lokal yang dapat anda akses dengan browser kesayangan anda.
+
+# Update Pool
+
+- (21/12/2021) Change Jumbotron Component to Simple Utilities Component
+- (20/12/2021) Update Bootstrap Version to v5.1
+- (20/12/2021) Update React-Bootstrap Version to v2.0.3
+- (20/12/2021) Gatsby Major Version Update
 
 ### Tutorial Lengkap
 
