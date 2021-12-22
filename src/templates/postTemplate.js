@@ -1,23 +1,23 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import { Disqus, CommentCount } from "gatsby-plugin-disqus"
+import React from "react";
+import { Link, graphql } from "gatsby";
+import { Disqus, CommentCount } from "gatsby-plugin-disqus";
 
-import "../styles/index.scss"
-import { slugify } from "../utils/utilityFunction"
-import SEO from "../components/Seo"
-import Layout from "../components/Layout"
-import Sidebar from "../parts/Sidebar"
+import "../styles/index.scss";
+import { slugify } from "../utils/utilityFunction";
+import SEO from "../components/Seo";
+import Layout from "../components/Layout";
+import Sidebar from "../parts/Sidebar";
 
 export default function postTemplate({ data }) {
-  const post = data.markdownRemark
-  const { title, author, date, tags, path, image } = post.frontmatter
+  const post = data.markdownRemark;
+  const { title, author, date, tags, path, image } = post.frontmatter;
 
   //Set your public url after published into production build
   const disqusConfig = {
     url: `https://dendense-boilerplate-netlifycms.netlify.app${path}`,
     title: title,
     identifier: path.split("/").slice(-1)[0],
-  }
+  };
 
   return (
     <div>
@@ -51,10 +51,10 @@ export default function postTemplate({ data }) {
               />
               <div style={{ marginTop: "2rem" }}>
                 Tags :{" "}
-                {tags.map(tag => (
+                {tags.map((tag) => (
                   <div className="mr-1 d-inline-flex" key={tag}>
                     <Link to={`/tag/${slugify(tag)}`}>
-                      <span className="badge badge-secondary text-uppercase">
+                      <span className="badge bg-primary text-uppercase">
                         {tag}
                       </span>
                     </Link>
@@ -72,7 +72,7 @@ export default function postTemplate({ data }) {
         </div>
       </Layout>
     </div>
-  )
+  );
 }
 
 export const postQuery = graphql`
@@ -89,4 +89,4 @@ export const postQuery = graphql`
       html
     }
   }
-`
+`;

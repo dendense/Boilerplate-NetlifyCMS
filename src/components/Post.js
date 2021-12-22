@@ -18,7 +18,7 @@ const Post = ({ title, author, date, description, path, image, tags }) => (
       {tags.map((tag) => (
         <div className="mr-1 d-inline-flex" key={tag}>
           <Link to={`/tag/${slugify(tag)}`}>
-            <span className="badge badge-secondary text-uppercase">{tag}</span>
+            <span className="badge bg-secondary text-uppercase">{tag}</span>
           </Link>
         </div>
       ))}
