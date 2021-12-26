@@ -16,7 +16,11 @@ const Post = ({ title, author, date, description, path, image, tags }) => (
     <Card.Body>
       <Card.Title>{title}</Card.Title>
       {tags.map((tag) => (
-        <div className="mr-1 d-inline-flex" key={tag}>
+        <div
+          className="d-inline-flex"
+          style={{ marginRight: "0.1rem" }}
+          key={tag}
+        >
           <Link to={`/tag/${slugify(tag)}`}>
             <span className="badge bg-secondary text-uppercase">{tag}</span>
           </Link>
