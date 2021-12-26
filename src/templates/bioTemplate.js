@@ -1,21 +1,17 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import React from "react";
+import { Link, graphql } from "gatsby";
 
-import "../styles/index.scss"
-import SEO from "../components/Seo"
-import Layout from "../components/Layout"
-import Sidebar from "../parts/Sidebar"
+import { Table } from "react-bootstrap";
+
+import "../styles/index.scss";
+import SEO from "../components/Seo";
+import Layout from "../components/Layout";
+import Sidebar from "../parts/Sidebar";
 
 export default function bioTemplate({ data }) {
-  const post = data.markdownRemark
-  const {
-    title,
-    email,
-    fullname,
-    website,
-    websitename,
-    image,
-  } = post.frontmatter
+  const post = data.markdownRemark;
+  const { title, email, fullname, website, websitename, image } =
+    post.frontmatter;
 
   return (
     <div>
@@ -63,6 +59,46 @@ export default function bioTemplate({ data }) {
               </div>
               <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </div>
+            <div>
+              <h2>Portfolio</h2>
+              <p>
+                <b>I'm a Teenager, Student, and Front-End Developer!</b>
+              </p>
+              <div style={{ paddingLeft: "1rem" }}>
+                <li>
+                  🔭 I’m currently working on a Project Polaris &amp; Himitsu
+                  Project!
+                </li>
+                <li>🌱 I’m currently learning everything 🤠</li>
+                <li>👯 I’m looking to collaborate with other developers</li>
+                <li>🥅 2021 Goals: Contribute more to Open Source projects</li>
+                <li>⚡ Fun fact: I love music & Japanese things</li>
+              </div>
+              <br />
+              <p>
+                <b>Education History</b>
+              </p>
+              <Table striped bordered hover>
+                <thead>
+                  <tr>
+                    <th>No</th>
+                    <th>Primary School</th>
+                    <th>Junior High School</th>
+                    <th>Senior High School</th>
+                    <th>College</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>SDN Penggung 1 (2013)</td>
+                    <td>SMPN 2 Cimahi (2016)</td>
+                    <td>SMKN 1 Cimahi (2019)</td>
+                    <td>UNIKOM (Out)</td>
+                  </tr>
+                </tbody>
+              </Table>
+            </div>
           </div>
           <div className="col-md-4">
             <Sidebar />
@@ -70,7 +106,7 @@ export default function bioTemplate({ data }) {
         </div>
       </Layout>
     </div>
-  )
+  );
 }
 
 export const bioQuery = graphql`
@@ -87,4 +123,4 @@ export const bioQuery = graphql`
       html
     }
   }
-`
+`;
