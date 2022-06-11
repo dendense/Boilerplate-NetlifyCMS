@@ -4,24 +4,30 @@ import { graphql } from "gatsby";
 import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import PostsCard from "../components/PostsCard";
+import Jumbotron from "../components/Jumbotron";
 
-export default function tagTemplate({ data, pageContext }) {
-  const { tags } = pageContext;
+export default function Photography({ data }) {
   return (
     <Layout>
-      <Seo title={"Tags " + tags} keyword={tags} />
-      <div className="container-fluid">
-        <h1>Post with tags "{tags}"</h1>
+      <Seo title="Photography" />
+      <Jumbotron
+        headline="Photography"
+        punchline="There's Love in Every Snap."
+        jumbcolor="primary"
+      />
+      <div className="container">
+        <h4>Latest Shots</h4>
         <PostsCard data={data.allMarkdownRemark.nodes} col={4} />
       </div>
     </Layout>
   );
 }
-export const tagsQuery = graphql`
-  query TagPosts($tags: String!) {
+
+export const IndexQuery = graphql`
+  query Photography {
     allMarkdownRemark(
       sort: { order: DESC, fields: frontmatter___date }
-      filter: { frontmatter: { tags: { eq: $tags } } }
+      filter: { frontmatter: { tags: { eq: "photography" } } }
     ) {
       nodes {
         frontmatter {
@@ -29,8 +35,8 @@ export const tagsQuery = graphql`
           title
           description
           author
-          path
           tags
+          path
           image
         }
       }

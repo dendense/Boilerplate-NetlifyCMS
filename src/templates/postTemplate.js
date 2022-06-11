@@ -4,7 +4,7 @@ import { Disqus, CommentCount } from "gatsby-plugin-disqus";
 
 import "../styles/index.scss";
 import { slugify } from "../utils/utilityFunction";
-import SEO from "../components/Seo";
+import Seo from "../components/Seo";
 import Layout from "../components/Layout";
 import Sidebar from "../parts/Sidebar";
 
@@ -22,7 +22,7 @@ export default function postTemplate({ data }) {
   return (
     <div>
       <Layout>
-        <SEO title={title} keyword={(title, tags)} />
+        <Seo title={title} keyword={(title, tags)} />
         <div className="row post-body">
           <div className="col-md-8">
             <div className="post-bar">
@@ -52,7 +52,11 @@ export default function postTemplate({ data }) {
               <div style={{ marginTop: "2rem" }}>
                 Tags :{" "}
                 {tags.map((tag) => (
-                  <div className="mr-1 d-inline-flex" key={tag}>
+                  <div
+                    className="d-inline-flex"
+                    style={{ marginRight: "0.1rem" }}
+                    key={tag}
+                  >
                     <Link to={`/tag/${slugify(tag)}`}>
                       <span className="badge bg-primary text-uppercase">
                         {tag}

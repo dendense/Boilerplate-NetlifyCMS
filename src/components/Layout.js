@@ -14,7 +14,7 @@ const Layout = ({ children }) => (
     <div className="container-fluid" style={{ padding: "1rem" }}>
       {children}
     </div>
-    <Footer copyright="DENDENSE" />
+    <Footer copyright="Deny Farras Febriyanto" />
   </div>
 );
 

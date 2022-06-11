@@ -1,11 +1,11 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import SEO from "../components/Seo"
+import Seo from "../components/Seo";
 
 const notfound = () => (
   <div className="d-flex align-items-center mt-3">
-    <SEO title="Page Not Found" />
+    <Seo title="Page Not Found" />
     <div className="container d-flex flex-column">
       <div className="d-flex justify-content-center">
         <img src="https://i.ibb.co/yVr4pnk/5.png" alt="404 Not Found" />
@@ -20,6 +20,6 @@ const notfound = () => (
       </div>
     </div>
   </div>
-)
+);
 
-export default notfound
+export default notfound;

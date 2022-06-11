@@ -1,7 +1,7 @@
 backend:
   name: git-gateway
-  branch: master
-  repo: dendense/Boilerplate-NetlifyCMS
+  branch: main
+  repo: dendense/pde37
 
   commit_messages:
     create: "Create {{collection}} “{{slug}}”"
@@ -46,11 +46,17 @@ collections:
           - { label: Title, name: title, widget: string, required: true }
           - { label: Fullname, name: fullname, widget: string, required: true }
           - { label: Email, name: email, widget: string, required: false }
+          - { label: Github, name: github, widget: string, required: true }
+          - { label: Website, name: website, widget: string, required: false }
+          - { label: Specs, name: specs, widget: string, required: false }
+          - { label: Address, name: address, widget: string, required: false }
+          - { label: Phone, name: phone, widget: string, required: false }
+          - { label: Rank, name: rank, widget: string, required: false }
           - {
-              label: Website Name,
-              name: websitename,
+              label: Instagram,
+              name: instagram,
               widget: string,
               required: false,
             }
-          - { label: Website, name: website, widget: string, required: false }
+          - { label: PDE, name: pde, widget: string, required: false }
           - { label: Body, name: body, widget: markdown }

@@ -1,14 +1,21 @@
 ---
 type: bio
 path: /bio
-title: Get in Touch!
-image: https://i.ibb.co/2gmbsT2/IMG-0153.jpg #Square Image Profile
-fullname: Deny Farras Febriyanto
-email: denyfarras@gmail.com
-websitename: Github
-website: https://github.com/dendense
+title: Let me Introduce Myself
+brand: Your Brand
+image: https://i.ibb.co/tzsChSB/PROJECT2-1.png #Square Image Profile
+fullname: Lorem Ipsum Dolor Sit Amet
+email: loremipsum@gmail.com
+github: loremipsum
+website: https://dendense.com/
+specs: Frontend Developer
+address: Bandung, West Java, Indonesia
+phone: Request by Email
+rank: lorem Ipsum
+instagram: deny_desu
+community: lorem_ipsum
 ---
 
-## Little Things About Me
+## Quotes
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+Sometimes it is the people no one can imagine anything of who do the things no one can imagine.

@@ -3,33 +3,31 @@ import { graphql } from "gatsby";
 
 import Seo from "../components/Seo";
 import Layout from "../components/Layout";
-import PostsCard from "../components/PostsCard";
+import PostCard from "../components/PostsCard";
 import Jumbotron from "../components/Jumbotron";
 
-import "../styles/index.scss";
-
-export default function Home({ data }) {
+export default function vectorart({ data }) {
   return (
     <Layout>
-      <Seo title="DENDENSE" />
+      <Seo title="Traveling" />
       <Jumbotron
-        headline="LOREM IPSUM"
-        punchline="Lorem Ipsum Dolor Sit Amet"
-        jumbcolor="dark"
+        headline="Traveling"
+        punchline="Very Moodly Traveler."
+        jumbcolor="warning"
       />
       <div className="container">
-        <h4>Latest Posts</h4>
-        <PostsCard data={data.allMarkdownRemark.nodes} col={4} />
+        <h4>Travel Lists</h4>
+        <PostCard data={data.allMarkdownRemark.nodes} col={4} />
       </div>
     </Layout>
   );
 }
 
 export const IndexQuery = graphql`
-  query Boilerplate {
+  query VectorArt {
     allMarkdownRemark(
       sort: { order: DESC, fields: frontmatter___date }
-      filter: { frontmatter: { type: { eq: "blog" } } }
+      filter: { frontmatter: { tags: { eq: "traveling" } } }
     ) {
       nodes {
         frontmatter {

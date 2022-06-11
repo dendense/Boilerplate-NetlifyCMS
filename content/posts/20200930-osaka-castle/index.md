@@ -6,7 +6,7 @@ author: SakuMayo
 date: 2020-09-30T07:17:26.066Z
 description: Spend your holiday with visiting Himeji Castle
 tags:
-  - Traveling
+  - traveling
 image: https://i.ibb.co/QXXfJTQ/heritage-5430081-1280.jpg
 ---
 

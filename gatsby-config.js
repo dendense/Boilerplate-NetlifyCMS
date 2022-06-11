@@ -1,9 +1,8 @@
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://github.com/dendense",
+    siteUrl: "https://dendense.com/",
     title: "DensLAB",
-    description: `Tech & Multimedia, Expand Your Skills Experience!`,
-    siteUrl: `https://github.com/dendense`,
+    description: `Proudly Indonesian Airforce`,
     author: {
       name: `DENDENSE`,
       summary: `Create & Develop Something`,
@@ -15,9 +14,21 @@ module.exports = {
   plugins: [
     "gatsby-plugin-sass",
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: "gatsby-plugin-manifest",
       options: {
-        trackingId: "UA-106476104-3",
+        icon: "static/favicon.png",
+      },
+    },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: [
+          "G-B5V0R8JJG0", // Google Analytics / GA
+        ],
+        pluginConfig: {
+          // Puts tracking script in the head instead of the body
+          head: true,
+        },
       },
     },
     "gatsby-plugin-image",

@@ -30,9 +30,7 @@ const Post = ({ title, author, date, description, path, image, tags }) => (
       <Link to={path} className="btn btn-primary">
         Read more
       </Link>
-      <div className="text-muted mt-2 small">
-        Author: {author} | Date: {date}
-      </div>
+      <div className="text-muted mt-2 small">Date: {date}</div>
     </Card.Body>
   </Card>
 );

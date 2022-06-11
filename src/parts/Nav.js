@@ -18,14 +18,21 @@ const Navigation = (props) => (
             activeClassName="nav-link active"
             to="/bio"
           >
-            Bio
+            Profile
           </Link>
           <Link
             className="nav-link"
             activeClassName="nav-link active"
-            to="/project"
+            to="/photography"
           >
-            Project
+            Photography
+          </Link>
+          <Link
+            className="nav-link"
+            activeClassName="nav-link active"
+            to="/vector"
+          >
+            Vector
           </Link>
         </Nav>
       </Navbar.Collapse>
