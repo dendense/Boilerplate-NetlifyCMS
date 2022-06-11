@@ -30,9 +30,9 @@ const Navigation = (props) => (
           <Link
             className="nav-link"
             activeClassName="nav-link active"
-            to="/vector"
+            to="/travel"
           >
-            Vector
+            Travel
           </Link>
         </Nav>
       </Navbar.Collapse>
