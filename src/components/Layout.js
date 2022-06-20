@@ -4,8 +4,6 @@ import PropTypes from "prop-types";
 import "../styles/index.scss";
 import Nav from "../parts/Nav";
 import Footer from "../parts/Footer";
-import { Helmet } from "react-helmet";
-import { withPrefix } from "gatsby";
 
 const Layout = ({ children }) => (
   <>
