@@ -1,6 +1,23 @@
-@import "../styles/bootstrap.css";
-@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap");
+@import "bootstrap/scss/functions";
+@import "bootstrap/scss/variables";
 
+body {
+  &.theme-default {
+
+    // import file scss theme
+    @import "./themes/themeDefault";
+    @import "./themes/themeSuffix";
+  }
+
+  &.theme-nogi {
+
+    // import file scss theme
+    @import "./themes/themeNogi";
+    @import "./themes/themeSuffix.scss";
+  }
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&display=swap");
 @import "./postTemplate_style";
 
 .dendense-font {
