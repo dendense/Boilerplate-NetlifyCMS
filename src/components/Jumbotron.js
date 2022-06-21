@@ -1,4 +1,5 @@
 import React from "react";
+import ThemeSwitch from "../components/ThemeSwitch";
 
 import "../styles/index.scss";
 
@@ -7,6 +8,7 @@ const Jumbotron = ({ headline, punchline, jumbcolor }) => (
     <div className="container-fluid py-5">
       <h1 className="display-5 fw-bold">{headline}</h1>
       <p className="col-md-8 fs-4 pl-1">{punchline}</p>
+      <ThemeSwitch />
     </div>
   </div>
 );

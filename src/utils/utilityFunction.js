@@ -13,4 +13,13 @@ const truncate = function (text, length) {
   return `${text.slice(0, length)}${text.length > length ? "..." : ""}`
 }
 
-module.exports = { slugify, truncate }
+function titleCase(str) {
+  return str?.replace(
+    /\w\S*/g,
+    function(txt) {
+      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+    }
+  );
+}
+
+module.exports = { slugify, truncate, titleCase }

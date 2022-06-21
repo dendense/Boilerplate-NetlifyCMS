@@ -6,16 +6,21 @@ import Nav from "../parts/Nav";
 import Footer from "../parts/Footer";
 
 const Layout = ({ children }) => (
-  <div
-    className="dendense-font"
-    style={{ minHeight: "100vh", position: "relative" }}
-  >
-    <Nav brand="DENDENSE" />
-    <div className="container-fluid" style={{ padding: "1rem" }}>
-      {children}
+  <>
+    {/* <Helmet>
+      <script type="text/javascript" src={withPrefix('scripts/themes.js')} type="module"></script>
+    </Helmet> */}
+    <div
+      className="dendense-font"
+      style={{ minHeight: "100vh", position: "relative" }}
+    >
+      <Nav brand="DENDENSE" />
+      <div className="container-fluid" style={{ padding: "1rem" }}>
+        {children}
+      </div>
+      <Footer copyright="Deny Farras Febriyanto" />
     </div>
-    <Footer copyright="Deny Farras Febriyanto" />
-  </div>
+  </>
 );
 
 Layout.propTypes = {
