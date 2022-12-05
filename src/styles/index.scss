@@ -1,16 +1,15 @@
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
+@import "bootstrap/scss/maps";
 
 body {
   &.theme-default {
-
     // import file scss theme
     @import "./themes/themeDefault";
     @import "./themes/themeSuffix";
   }
 
   &.theme-nogi {
-
     // import file scss theme
     @import "./themes/themeNogi";
     @import "./themes/themeSuffix.scss";
